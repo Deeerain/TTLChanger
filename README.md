@@ -2,4 +2,4 @@
 
 ### Программа для изменения TTL на пк.
 
-![Скриншот](/screenshots/ttlchanger.png?raw=true)
+![](/screenshots/ttlchanger.png?raw=true)
