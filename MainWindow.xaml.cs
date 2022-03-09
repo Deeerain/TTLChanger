@@ -39,6 +39,9 @@ namespace TTLChanger
         {
             try
             {
+                string client_v4 = v4TTLTextBox.Text;
+                string client_v6 = v6TTLTextBox.Text;
+
                 var dialogResult = MessageBox.Show("Вы используете эту программу на свой страх и риск. Вы уверены, что хотите сохранить изменения?", "", MessageBoxButton.YesNo);
 
                 if(dialogResult == MessageBoxResult.Yes)

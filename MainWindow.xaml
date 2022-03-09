@@ -49,6 +49,7 @@
             </Grid.ColumnDefinitions>
 
             <Label FontSize="25" Margin="5 5 0 0" Grid.Row="0" Grid.Column="0" Content="{Binding ElementName=TTLChangerWindow, Path=Title}" Foreground="White"></Label>
+            
             <Button x:Name="CloseButton" Grid.Row="0" Grid.Column="1" Content="X" Click="CloseButton_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -57,8 +58,25 @@
                 </Button.Resources>
             </Button>
 
-            <TextBox x:Name="v4TTLTextBox" Grid.Row="1" Grid.ColumnSpan="2" Text="None" InputScope="Digits"></TextBox>
-            <TextBox x:Name="v6TTLTextBox" Grid.Row="2" Grid.ColumnSpan="2" Text="None" InputScope="Digits"></TextBox>
+            <TextBox x:Name="v4TTLTextBox" Grid.Row="1" Grid.ColumnSpan="2" Text="None" InputScope="Digits">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        TTl для протокола IPv4.
+                        По умолчанию 128.
+                        Для обхода провайдеров (МТС, TELE2) используйте значение 64.
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            
+            <TextBox x:Name="v6TTLTextBox" Grid.Row="2" Grid.ColumnSpan="2" Text="None" InputScope="Digits">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        TTl для протокола IPv6.
+                        По умолчанию 128.
+                        Для обхода провайдеров (МТС, TELE2) используйте значение 64.
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
 
             <Button x:Name="SaveButton" Grid.Row="3" Grid.ColumnSpan="2" Content="Сохранить" Click="SaveButton_Click">
                 <Button.Resources>
