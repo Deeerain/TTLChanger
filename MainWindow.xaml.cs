@@ -52,11 +52,15 @@ namespace TTLChanger
                         TTLManager.V6TTL = v6TTLTextBox.Text;
                 }
 
-                var rebootDialog = MessageBox.Show("После изменений, рекомендуется перезагрузка. Перезагрузить компьютер?", "", MessageBoxButton.YesNo);
+                if (TTLManager.IsChanged)
+                {
+                    var rebootDialog = MessageBox.Show("После изменений, рекомендуется перезагрузка. Перезагрузить компьютер?", "", MessageBoxButton.YesNo);
 
-                if (rebootDialog == MessageBoxResult.Yes)
-                    RebootPC();
+                    if (rebootDialog == MessageBoxResult.Yes)
+                        RebootPC();
 
+                    TTLManager.IsChanged = false;
+                }
             }
             catch (Exception ex)
             {
@@ -72,7 +76,7 @@ namespace TTLChanger
 
         private void RebootPC()
         {
-            Process.Start("shutdown", "/s /t 0");
+            Process.Start("shutdown", "/r /t 0");
         }
     }
 }

@@ -58,22 +58,24 @@
                 </Button.Resources>
             </Button>
 
+            <Label Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Content="IPv4"/>
             <TextBox x:Name="v4TTLTextBox" Grid.Row="1" Grid.ColumnSpan="2" Text="None" InputScope="Digits">
                 <TextBox.ToolTip>
                     <ToolTip>
                         TTl для протокола IPv4.
                         По умолчанию 128.
-                        Для обхода провайдеров (МТС, TELE2) используйте значение 64.
+                        Для обхода провайдеров (МТС, TELE2) используйте значение 65.
                     </ToolTip>
                 </TextBox.ToolTip>
             </TextBox>
-            
+
+            <Label Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Content="IPv6"/>
             <TextBox x:Name="v6TTLTextBox" Grid.Row="2" Grid.ColumnSpan="2" Text="None" InputScope="Digits">
                 <TextBox.ToolTip>
                     <ToolTip>
                         TTl для протокола IPv6.
                         По умолчанию 128.
-                        Для обхода провайдеров (МТС, TELE2) используйте значение 64.
+                        Для обхода провайдеров (МТС, TELE2) используйте значение 65.
                     </ToolTip>
                 </TextBox.ToolTip>
             </TextBox>

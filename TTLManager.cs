@@ -7,6 +7,7 @@ namespace TTLChanger
         private RegistryKey _tcpipKey;
         private RegistryKey _tcpip6Key;
         private string _defaultTTLPropertyName;
+        public bool IsChanged = false;
 
         private string _v4TTL;
         private string _v6TTL;
@@ -25,13 +26,29 @@ namespace TTLChanger
         public string V4TTL
         {
             get => _v4TTL;
-            set => _tcpipKey.SetValue(_defaultTTLPropertyName, value, RegistryValueKind.DWord);
+
+            set
+            {
+                if (value != _v4TTL)
+                {
+                    IsChanged = true;
+                    _tcpipKey.SetValue(_defaultTTLPropertyName, value, RegistryValueKind.DWord);
+                }
+            }
         }
 
         public string V6TTL
         {
             get => _v6TTL;
-            set => _tcpip6Key.SetValue(_defaultTTLPropertyName, value, RegistryValueKind.DWord);
+
+            set
+            {
+                if(value != _v6TTL)
+                {
+                    IsChanged = true;
+                    _tcpip6Key.SetValue(_defaultTTLPropertyName, value, RegistryValueKind.DWord);
+                }
+            }
         }
 
         private bool HaveDefaultTTLParameter(RegistryKey key)
