@@ -1,7 +1,5 @@
-<dev style="align: center;">
-  
+<dev style="align: center;">  
 ![](/screenshots/ttlchanger.png)
-
 </dev>
 
 # TTLChanger
