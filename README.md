@@ -1,6 +1,6 @@
 <dev style="align: center;">
   
-![](/screenshots/ttlchanger.png?raw=true)
+![](/screenshots/ttlchanger.png)
 
 </dev>
 # TTLChanger
