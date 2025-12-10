@@ -1,4 +1,4 @@
-<dev style="align: center;">
+<dev align="center">
   <img src="./screenshots/ttlchanger.png"/>
 </dev>
 
