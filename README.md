@@ -1,8 +1,8 @@
-<dev style="align: center">
+<dev style="align: center;">
   
 ![](/screenshots/ttlchanger.png?raw=true)
 </dev>
-# TTLChanger.
+# TTLChanger
 
 TTLChanger — это простое приложение, которое позволяет пользователям легко изменять значение Time To Live (TTL) в реестре Windows. Эта настройка необходима для обхода ограничений мобильных операторов, которые блокируют раздачу интернета (режим модема или точки доступа Wi-Fi) с вашего устройства на другие.
 
