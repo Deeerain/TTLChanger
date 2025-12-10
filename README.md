@@ -1,5 +1,5 @@
-<dev style="align: center;">  
-![](/screenshots/ttlchanger.png)
+<dev style="align: center;">
+  <img src="./screenshots/ttlchanger.png"/>
 </dev>
 
 # TTLChanger
